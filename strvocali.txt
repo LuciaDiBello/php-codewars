@@ -1,0 +1,16 @@
+Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+
+Examples
+replace("Hi!") === "H!!"
+replace("!Hi! Hi!") === "!H!! H!!"
+replace("aeiou") === "!!!!!"
+replace("ABCDE") === "!BCD!"
+
+<?php
+$s = "Hello world";
+$vocali = ['a','e','i','o','u','A','E','I','O','U'];
+foreach (str_split($s) as $c)
+   if (in_array($c, $vocali))
+         $s = str_replace($c, "!", $s);              
+echo "La stringa è: " . $s;
+?>

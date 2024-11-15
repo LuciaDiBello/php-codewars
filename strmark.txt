@@ -1,0 +1,27 @@
+Remove an exclamation mark from the end of a string. 
+Examples
+"Hi!"     ---> "Hi"
+"Hi!!!"   ---> "Hi!!"
+"!Hi"     ---> "!Hi"
+"!Hi!"    ---> "!Hi"
+"Hi! Hi!" ---> "Hi! Hi"
+"Hi"      ---> "Hi"
+
+<?php
+$s = "Hi!";
+$len = strlen($s);
+$b = false;
+if (substr($s, -1) === "!"){
+        $b = true;
+         //$arr = str_split($s);
+         //for ($i = 0; $i < $len -1; $i++)
+         //     $str[$i]= $arr[$i];
+         //$stringa = implode('', $str);  
+        $stringa = substr($s, 0, $len-1);
+     }
+ 
+if ($b)
+      echo "La stringa è: " . $stringa;
+else
+      echo "La stringa è: " . $s;
+?>
